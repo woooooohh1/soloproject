@@ -33,7 +33,9 @@ main .event li a span:last-child{
   font-family: 'Open Sans';
   font-size: 12px;
 }
+
 /*메인슬라이드*/
+
 #m_slide{
   width: 100%;
   height: 800px;
@@ -83,6 +85,7 @@ main .event li a span:last-child{
   position: relative;
   left: 120px;
 }
+/*룩북*/
 #lookbook{
   background: #fff;
   width: 100%;
@@ -101,7 +104,7 @@ main .event li a span:last-child{
   text-align: center;
 }
 #lookbook > div{
-  width: 400px;
+  width: 110px;
   height: 2px;
   background: #5a5a5a;
   margin: 0px auto;
@@ -170,3 +173,69 @@ main .event li a span:last-child{
 }
 .banner:hover::before {width:70%}
 .banner:hover::after {height:60%}
+/*상품*/
+#product{
+  width: 1200px;
+  margin: 0px auto;
+  color: #fff;
+}
+#product h2{
+  text-align: center;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  margin-top: 100px;
+  /* line-height: 27px; */
+}
+.list{
+  display: flex;
+}
+.wear{
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3,auto);
+  /* grid-template-rows: 1fr 1fr ; */
+}
+.wear li span{
+  color: #fff;
+  font-family: 'Open Sans';
+}
+.wear li span:first-of-type{
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+}
+.wear li span:nth-of-type(2){
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 33px;
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+.wear li span:last-of-type{
+  font-weight: 400;
+  font-size: 16px;
+  margin-left: 4px;
+  position: absolute;
+  transform: translateY(20px);
+}
+.wear li a div{
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  position: relative;
+  margin-top: 8px;
+  margin-right: 4px;
+  /* z-index: 5; */
+}
+.wear li a div img{
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%,-50%);
+}
+.wear li a >img{
+  width: 100%;
+}

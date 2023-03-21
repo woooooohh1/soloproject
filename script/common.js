@@ -2,6 +2,7 @@
 let tog_btn=document.querySelector('.toggle');
 tog_btn.addEventListener('click',()=>{
   document.querySelector('.t_wrap').classList.add('on02');
+  document.querySelector('.t_nav').classList.add('on04');
   // document.querySelector('.t_wrap').innerHTML+='<div class="on03"></div>';
   // div 요소를 생성
   let insertDiv = document.createElement('div');
@@ -17,6 +18,7 @@ tog_btn.addEventListener('click',()=>{
 let close_btn=document.querySelector('aside>div>a');
 close_btn.addEventListener('click',()=>{
   document.querySelector('.t_wrap').classList.remove('on02');
+  document.querySelector('.t_nav').classList.remove('on04');
   document.querySelector('.on03').remove();
 })
 //nav서식
