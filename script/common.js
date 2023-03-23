@@ -25,6 +25,14 @@ close_btn.addEventListener('click',()=>{
 let n_btn=document.querySelectorAll('.nav > li');
 for(let i=1; i<n_btn.length;i++){
   n_btn[i].addEventListener('click',function(){
+    // n_btn[i].querySelector('.s_nav').classList.remove('active');
+    if(document.querySelector('.active') != null) { // 첫 클릭시 에러 방지용 코드
+      if(document.querySelector('.active') != this.querySelector('.active')) { // 현재 열려있던 요소와 다른 요소를 클릭했을 경우 실행
+        document.querySelector('.active').classList.remove('active');
+        document.querySelector('.on01').classList.remove('on01');
+      }
+    }
+    //toggle 클래스를 응용하여 클릭한 요소의 클래스가 남아있는 경우 접어주고 아니라면 열어준다.
     this.querySelector('.s_nav').classList.toggle('active');
     this.querySelector('a>img').classList.toggle('on01');
   })
