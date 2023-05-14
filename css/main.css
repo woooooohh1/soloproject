@@ -322,6 +322,7 @@ main .event li a span:last-child{
   font-size: 16px;
   line-height: 23px;
   margin-bottom: 40px;
+  overflow: hidden;
 }
 #magazine hr{
     border: none;
@@ -335,15 +336,27 @@ main .event li a span:last-child{
   padding-bottom: 40px;
 }
 #magazine div{
-  width: 1200px;
+  /* width: 1200px; */
   margin: 0px auto;
 }
 #magazine ul{
   margin-top: 32px;
   margin-bottom: 32px;
   display: flex;
+  width: 100%;
+  animation: slide 10s linear infinite;
   /* justify-content: center; */
+}
+#magazine ul li{
 }
 #magazine ul li img{
   height: 500px;
+}
+@keyframes slide {
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(-3100px);
+  }
 }
